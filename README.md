@@ -1,5 +1,5 @@
 
-# 🧩 SlotSwapper — ServiceHive SDE Assignment
+# 🧩 SlotSwapper 
 
 ### 👨‍💻 Developer
 **Name:** Tharun Jakkam  
