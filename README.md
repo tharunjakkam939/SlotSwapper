@@ -37,8 +37,8 @@ When both users agree, their respective events are exchanged.
 
 ## 🏗️ Architecture Overview
 
-![Architecture Overview](<img width="1024" height="1024" alt="ChatGPT Image Nov 9, 2025, 10_00_25 PM" src="https://github.com/user-attachments/assets/0fed1b2f-16a3-4f27-a9ac-b8bd00449bd6" />
-)
+<img width="1024" height="1024" alt="ChatGPT Image Nov 9, 2025, 10_00_25 PM" src="https://github.com/user-attachments/assets/0fed1b2f-16a3-4f27-a9ac-b8bd00449bd6" />
+
 
 
 
