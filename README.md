@@ -243,6 +243,9 @@ SlotSwapper/
 - Improved async handling in frontend hooks.
 
 ---
+##OUTPUTS
+<img width="1916" height="1028" alt="image" src="https://github.com/user-attachments/assets/f1d493ea-7f90-4dcd-9301-6c484cf48b85" />
+
 
 ## 🏁 Conclusion
 
