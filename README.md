@@ -37,40 +37,8 @@ When both users agree, their respective events are exchanged.
 
 ## 🧩 Architecture Overview
 
-```
-┌──────────────────────────────┐
-│         FRONTEND (React)     │
-│  - Signup/Login               │
-│  - Dashboard (My Events)      │
-│  - Marketplace (Swaps)        │
-│  - Requests (Pending Swaps)   │
-│  ↓                            │
-│  Fetch API calls → /api/...   │
-└──────────────┬────────────────┘
-               │
-               ▼
-┌──────────────────────────────┐
-│        BACKEND (Express)     │
-│ Routes:                      │
-│  /auth → register/login       │
-│  /events → CRUD + toggle      │
-│  /marketplace → list swaps    │
-│  /requests → send/accept/decline │
-│ Middleware: JWT auth          │
-│ ORM: Prisma + SQLite          │
-└──────────────┬────────────────┘
-               │
-               ▼
-┌──────────────────────────────┐
-│      DATABASE (SQLite)       │
-│  Tables:                     │
-│   - User                     │
-│   - Event                    │
-│   - SwapRequest              │
-└──────────────────────────────┘
-```
+![Uploading ChatGPT Image Nov 9, 2025, 10_00_25 PM.png…]()
 
----
 
 ## ⚙️ Setup Instructions
 
@@ -288,5 +256,5 @@ SlotSwapper/
 
 ## 👨‍💻 Author
 **Tharun Jakkam**  
-📧 tharun.jakkam@example.com  
-💼 GitHub: [github.com/yourusername](https://github.com/yourusername)
+📧 tharunjakkam2004@gmail.com  
+💼 GitHub: https://github.com/tharunjakkam939
