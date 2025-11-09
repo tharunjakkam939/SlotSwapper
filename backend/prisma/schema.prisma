@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int    @id @default(autoincrement())
+  name     String
+  email    String @unique
+  password String
+
+  // Relations
+  events   Event[]
+  requests SwapRequest[] @relation("Requester")
+}
+
+model Event {
+  id        Int      @id @default(autoincrement())
+  title     String
+  startTime DateTime
+  endTime   DateTime
+  status    String   @default("BUSY")
+  ownerId   Int
+  owner     User     @relation(fields: [ownerId], references: [id])
+  createdAt DateTime @default(now())
+
+  // 👇 These two are the missing opposite sides of relations
+  mySwapRequests    SwapRequest[] @relation("MySlot")
+  theirSwapRequests SwapRequest[] @relation("TheirSlot")
+}
+
+model SwapRequest {
+  id          Int    @id @default(autoincrement())
+  requesterId Int
+  mySlotId    Int
+  theirSlotId Int
+  status      String @default("PENDING")
+
+  requester User @relation("Requester", fields: [requesterId], references: [id])
+
+  // 👇 Correctly linked relations
+  mySlot    Event @relation("MySlot", fields: [mySlotId], references: [id])
+  theirSlot Event @relation("TheirSlot", fields: [theirSlotId], references: [id])
+}
